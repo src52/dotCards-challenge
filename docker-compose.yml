@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+    db:
+      image: mysql
+      command: --default-authentication-plugin=mysql_native_password
+      restart: unless-stopped
+      environment:
+        - MYSQL_USERNAME=user
+        - MYSQL_PASSWORD=secure-password!
+        - MYSQL_ROOT_PASSWORD=secure-password!
+        - MYSQL_DATABASE=dotcards
+      healthcheck:
+        test: ["CMD", 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-p$MYSQL_ROOT_PASSWORD' ]
+        timeout: 3s
+        retries: 80
+    app:
+      depends_on:
+        db:
+          condition: service_healthy
+      build: ./
+      restart: no
+      stdin_open: true
+      tty: true
