@@ -7,10 +7,10 @@ that performs CRUD operations on a MySQL database.
 
 ## Features
 ### Technical requirements met
-- (GET /:collection) requests fetch the specified row, and return JSON to the client.
-- (POST /:collection) requests create a new row in the database if the correct parameters are specified.
-- (POST /:collection/:id) requests modify rows in the database if the specified ID exists.
-- (DELETE /:collection/:id) requests remove rows from the database if the specified ID exists.
+- GET (/:collection) requests fetch the specified row, and return JSON to the client.
+- POST (/:collection) requests create a new row in the database if the correct parameters are specified.
+- POST (/:collection/:id) requests modify rows in the database if the specified ID exists.
+- DELETE (/:collection/:id) requests remove rows from the database if the specified ID exists.
 - On server startup, tables specified in `schema.ts` are created in the database. 
 ---
 ### Project details
