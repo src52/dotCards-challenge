@@ -13,10 +13,6 @@ const user = {
     registrationDate: `2023-08-02T20:24:37.000Z`
 };
 
-/**
- * Begin the application by first synchronizing the database with the schema, then starting the API to query it.
- */
-
 beforeAll(async () => {
     try {
         await sequelize.sync({ force: true, alter: true });
