@@ -25,4 +25,4 @@ being modified elsewhere. This can be achieved using transactions and proper tab
 Overall, I really enjoyed this project. It was a lot of fun, and it taught me about health check commands in Docker.
 
 ## Screenshots
-![11 tests passing](C:\Users\Spencer\Projects\dotCards\images\img.png)
+![11 tests passing](images/img.png)
