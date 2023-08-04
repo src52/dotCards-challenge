@@ -7,7 +7,7 @@ that performs CRUD operations on a MySQL database.
 
 ## Features
 ### Technical requirements met
-- GET (/:collection) requests fetch the specified row, returning JSON to the client.
+- GET (/:collection/:id) requests fetch the specified row, returning JSON to the client.
 - POST (/:collection) requests create a new row in the database if the correct parameters are specified.
 - POST (/:collection/:id) requests modify a row in the database if the specified ID exists.
 - DELETE (/:collection/:id) requests remove a row from the database if the specified ID exists.
